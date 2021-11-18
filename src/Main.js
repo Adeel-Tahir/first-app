@@ -1,6 +1,5 @@
 
 import React,{useContext} from 'react';
-import Footer from './Footer'
 import './Main.css';
 import { BurgerContext } from './BurgerContext';
 function Main(){
