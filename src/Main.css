@@ -13,7 +13,7 @@
   padding: 16px;
   top: 30%;
   box-sizing: border-box;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   width: 500px;
   left: calc(50% - 250px);
   transform: translateY(-100vh);
@@ -28,7 +28,7 @@
   overflow-y: auto;
   font-size: 1.2rem;
   width: 700px;
-  height: 600px;
+  height: 480px;
 }
 
 .BurgerIngredient__BreadTop__2Pkwe {
@@ -132,7 +132,6 @@
   outline: none;
   background-color: #daa972;
   color: #fff;
-
 }
 
 .disable_less {
@@ -183,10 +182,8 @@
   background-color: #a0db41;
   border: 1px solid #966909;
   color: #966909;
-  animation: BuildControls__enable__3XAWA .3s linear;
+  animation: BuildControls__enable__3XAWA 0.3s linear;
 }
-
-
 
 .lettuseSide {
   font-family: Open Sans, sans-serif;
@@ -199,8 +196,6 @@
   background: linear-gradient(#228c1d, #91ce50);
   border-radius: 20px;
 }
-
-
 
 .baconSide {
   font-family: Open Sans, sans-serif;

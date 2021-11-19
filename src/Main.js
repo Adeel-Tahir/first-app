@@ -1,37 +1,36 @@
+import React, { useContext } from "react";
+import Footer from "./Footer";
+import "./Main.css";
+import { BurgerContext } from "./BurgerContext";
+function Main() {
+  const { lettuceCount, baconCount, cheeseCount, meatCount } =
+    useContext(BurgerContext);
+  console.log(lettuceCount);
+  const [lettuce] = lettuceCount;
+  const [bacon] = baconCount;
+  const [cheese] = cheeseCount;
+  const [meat] = meatCount;
+  const getArray = (count, side) => {
+    return [...Array(count).keys()].map((task) => (
+      <div key={task.length} className={side}></div>
+    ));
+  };
+  const burgerInside = () => {
+    const lettuceArray = getArray(lettuce, "lettuseSide");
+    const baconArray = getArray(bacon, "baconSide");
+    const cheeseArray = getArray(cheese, "cheeseSide");
+    const meatArray = getArray(meat, "meatSide");
+    const burger = [
+      ...lettuceArray,
+      ...baconArray,
+      ...cheeseArray,
+      ...meatArray,
+    ];
+    if (burger.length === 0) burger.push(<p key="0">No Ingredients Added</p>);
+    return burger;
+  };
 
-import React,{useContext} from 'react';
-import Footer from './Footer'
-import './Main.css';
-import { BurgerContext } from './BurgerContext';
-function Main(){
-  const { value, value2,value3,value4 } = useContext(BurgerContext);
-  const [lettuce] = value;
-  const [bacon]=value2;
-  const [cheese]=value3;
-  const [meat]=value4;
-  const burgerInside=()=>{
-
-    let burger = [];
-
-        for (let i = 0; i < lettuce; i++){
-            burger.push(<div key={burger.length} className="lettuseSide"></div>);
-        }
-        for (let i = 0; i < bacon; i++){
-            burger.push(<div key={burger.length} className="baconSide"></div>);
-        }
-        for (let i = 0; i < cheese; i++){
-            burger.push(<div key={burger.length} className="cheeseSide"></div>);
-        }
-        for (let i = 0; i < meat; i++){
-            burger.push(<div key={burger.length} className="meatSide"></div>);
-        }
-        if(burger.length === 0)
-            burger.push(<p key="0">No Ingredients Added</p>);
-        return burger;
-
-  }
-
-  return(
+  return (
     <main className="Layout__Content__3KSp3">
       <div className="Modal__Modal__cd320"></div>
       <div className="Modal__Modal__cd320"></div>
