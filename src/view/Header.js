@@ -1,6 +1,6 @@
-import "./Header.css";
+import "../style/Header.css";
 import React, { useContext } from "react";
-import burgerImage from "./burgerImage.png";
+import burgerImage from "../assets/burgerImage.png";
 import { Link } from "react-router-dom";
 import { BurgerContext } from "./BurgerContext";
 
@@ -10,11 +10,7 @@ function Header() {
 
   return (
     <header className="Toolbar__Toolbar__2hkfg">
-      <div className="DrawerToggle__DrawerToggle__1eThf">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <div className="DrawerToggle__DrawerToggle__1eThf"></div>
       <div className="Toolbar__Logo__24rue">
         <div className="Logo__Logo__2A07e">
           <img src={burgerImage} alt="myBurger" />

@@ -1,25 +1,23 @@
 import React, { useContext } from "react";
 import Footer from "./Footer";
-import "./Main.css";
+import "../style/Main.css";
 import { BurgerContext } from "./BurgerContext";
 function Main() {
-  const { lettuceCount, baconCount, cheeseCount, meatCount } =
-    useContext(BurgerContext);
-  console.log(lettuceCount);
-  const [lettuce] = lettuceCount;
-  const [bacon] = baconCount;
-  const [cheese] = cheeseCount;
-  const [meat] = meatCount;
+  const { lettuce, bacon, cheese, meat } = useContext(BurgerContext);
+  const [lettuceCount] = lettuce;
+  const [baconCount] = bacon;
+  const [cheeseCount] = cheese;
+  const [meatCount] = meat;
   const getArray = (count, side) => {
     return [...Array(count).keys()].map((task) => (
       <div key={task.length} className={side}></div>
     ));
   };
   const burgerInside = () => {
-    const lettuceArray = getArray(lettuce, "lettuseSide");
-    const baconArray = getArray(bacon, "baconSide");
-    const cheeseArray = getArray(cheese, "cheeseSide");
-    const meatArray = getArray(meat, "meatSide");
+    const lettuceArray = getArray(lettuceCount, "lettuseSide");
+    const baconArray = getArray(baconCount, "baconSide");
+    const cheeseArray = getArray(cheeseCount, "cheeseSide");
+    const meatArray = getArray(meatCount, "meatSide");
     const burger = [
       ...lettuceArray,
       ...baconArray,

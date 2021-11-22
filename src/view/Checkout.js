@@ -1,13 +1,11 @@
 import React from "react";
-import "./Main.css";
-import "./SignUp.css";
+import "../style/Main.css";
+import "../style/SignUp.css";
 import { Link } from "react-router-dom";
-import Header from "./Header";
 import Main from "./Main";
 function Checkout() {
   return (
-    <>
-      <Header />
+    <React.Fragment>
       <Main />
       <div className="checkout-buttons">
         <Link to="/">
@@ -27,7 +25,7 @@ function Checkout() {
           </button>
         </Link>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 

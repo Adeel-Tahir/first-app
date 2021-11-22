@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Checkout from "./Checkout";
-import Header from "./Header";
-import "./ContactDetails.css";
+import "../style/ContactDetails.css";
 import { Link } from "react-router-dom";
 import { BurgerContext } from "./BurgerContext";
 
@@ -10,8 +9,7 @@ function ContactDetails() {
   const [login, setLogin] = loginCheck;
 
   return (
-    <>
-      <Header />
+    <React.Fragment>
       <Checkout />
       <div class="ContactData__ContactData__1whvJ">
         <h4>Enter your Contact Data</h4>
@@ -79,7 +77,7 @@ function ContactDetails() {
           </Link>
         </form>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 export default ContactDetails;
