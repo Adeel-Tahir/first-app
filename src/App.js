@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BurgerProvider } from "./view/BurgerContext";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Burger from "./view/Burger.js";
+import Header from "./view/Header";
+import SignUp from "./view/SignUp";
+import Order from "./view/Order";
+import Checkout from "./view/Checkout";
+import ContactDetails from "./view/ContactDetails";
+import ErrorComponent from "./view/ErrorComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <BurgerProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="*" element={<ErrorComponent />} />
+            <Route path="/sign_up" exact element={<SignUp />} />
+            <Route path="/" exact element={<Burger />} />
+            <Route path="/logout" exact element={<Burger />} />
+            <Route path="/orders" exact element={<Order />} />
+            <Route path="/checkout" exact element={<Checkout />} />
+            <Route path="/contact_details" exact element={<ContactDetails />} />
+          </Routes>
+        </Router>
+      </BurgerProvider>
+    </React.Fragment>
   );
 }
-
 export default App;
