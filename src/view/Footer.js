@@ -72,7 +72,7 @@ const Footer = () => {
   };
   const makeBurger = (count, element) => {
     return (
-      <>
+      <React.Fragment>
         <div className="BuildControl__BuildControl__ibcUQ">
           <div className="BuildControl__Label__2VLnR">element</div>
           <button
@@ -89,10 +89,9 @@ const Footer = () => {
             More
           </button>
         </div>
-      </>
+      </React.Fragment>
     );
   };
-  console.log(makeBurger(lettuceCount, "lettuce"));
   return (
     <div className="BuildControls__BuildControls__220uz">
       <p>

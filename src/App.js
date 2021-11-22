@@ -11,7 +11,7 @@ import ErrorComponent from "./view/ErrorComponent";
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <BurgerProvider>
         <Router>
           <Header />
@@ -26,7 +26,7 @@ function App() {
           </Routes>
         </Router>
       </BurgerProvider>
-    </>
+    </React.Fragment>
   );
 }
 export default App;

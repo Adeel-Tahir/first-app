@@ -28,7 +28,7 @@ function Header() {
             </a>
           </li>
           {login ? (
-            <>
+            <React.Fragment>
               <li className="NavigationItem__NavigationItem__3YSjr">
                 <Link to="/orders" className="login-link">
                   <a className="login_style" aria-current="false" href="/auth">
@@ -48,7 +48,7 @@ function Header() {
                   </a>
                 </Link>
               </li>
-            </>
+            </React.Fragment>
           ) : (
             <li className="NavigationItem__NavigationItem__3YSjr">
               <Link to="/sign_up" className="login-link">
